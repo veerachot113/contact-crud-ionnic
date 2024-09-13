@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>รายชื่อผู้ติดต่อ</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openAddContactModal()">เพิ่มรายชื่อผู้ติดต่อ</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="segment" (ionChange)="segmentChanged()" color="primary" class="custom-segment">
+    <ion-segment-button value="all">
+      ทั้งหมด
+    </ion-segment-button>
+    <ion-segment-button value="friends">
+      เพื่อน
+    </ion-segment-button>
+    <ion-segment-button value="family">
+      ครอบครัว
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-list *ngIf="filteredContacts.length > 0" class="contact-list">
+    <ion-item *ngFor="let contact of filteredContacts" [routerLink]="['/detail-contact', contact.id]" class="contact-item">
+      <ion-icon name="person-circle-outline" slot="start" class="contact-icon"></ion-icon>
+      <ion-label>
+        <h2>{{ contact.firstName }} {{ contact.lastName }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div id="container" *ngIf="filteredContacts.length === 0">
+    <strong>ไม่พบผู้ติดต่อ</strong>
+    <p>เพิ่มผู้ติดต่อใหม่เพื่อเริ่มต้น!</p>
+  </div>
+</ion-content>

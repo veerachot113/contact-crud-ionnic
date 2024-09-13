@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>เพิ่มรายชื่อผู้ติดต่อ</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">ปิด</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="add-contact-form">
+    <ion-item class="input-item">
+      <ion-label position="floating">ชื่อ</ion-label>
+      <ion-input [(ngModel)]="newContact.firstName"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-label position="floating">นามสกุล</ion-label>
+      <ion-input [(ngModel)]="newContact.lastName"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="newContact.email"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-label position="floating">เบอร์โทร</ion-label>
+      <ion-input [(ngModel)]="newContact.phone"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-label>หมวดหมู่</ion-label>
+      <ion-select [(ngModel)]="newContact.category">
+        <ion-select-option value="family">ครอบครัว</ion-select-option>
+        <ion-select-option value="friends">เพื่อน</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="full" (click)="saveContact()" [disabled]="!isFormValid()" class="save-button">บันทึก</ion-button>
+  </div>
+</ion-content>

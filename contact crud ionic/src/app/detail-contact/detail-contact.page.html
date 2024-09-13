@@ -1,0 +1,39 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="ย้อนกลับ" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ contact?.firstName }} {{ contact?.lastName }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary" *ngIf="contact" [routerLink]="'/edit-contact/' + contact.id">
+        แก้ไข
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="contact">
+  <div class="content-wrapper">
+    <div class="profile-section">
+      <ion-thumbnail class="user-image">
+        <img src="/assets/avatar.png">
+      </ion-thumbnail>
+      <h2 class="user-name">{{contact.firstName}} {{contact.lastName}}</h2>
+    </div>
+
+    <ion-list class="info-list">
+      <ion-item lines="none">
+        <ion-label position="stacked">เบอร์โทร</ion-label>
+        <ion-text color="primary">{{contact.phone}}</ion-text>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked">Email</ion-label>
+        <ion-text color="primary">{{contact.email}}</ion-text>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked">หมวดหมู่</ion-label>
+        <ion-text color="primary">{{ getCategoryInThai(contact.category) }}</ion-text>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

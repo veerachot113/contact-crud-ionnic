@@ -1,0 +1,64 @@
+ion-header {
+  --background: #007bff;
+  --color: #ffffff;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-color-base: #ffffff;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+ion-content {
+  --background: #f4f5f8; /* เพิ่มพื้นหลังสีอ่อน */
+
+  .add-contact-form {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-item {
+    --background: #ffffff;
+    --border-color: #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+  }
+
+  ion-label {
+    font-size: 1rem;
+    color: #555; /* สีของ label */
+  }
+
+  ion-input,
+  ion-select {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    color: #333; /* สีของข้อความ input */
+  }
+
+  .save-button {
+    --background: #007bff;
+    --color: #ffffff;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    padding: 12px 0; /* เพิ่ม padding ให้ปุ่มดูใหญ่ขึ้น */
+  }
+
+  ion-button {
+    --background: #007bff;
+    --color: #ffffff;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+  }
+}

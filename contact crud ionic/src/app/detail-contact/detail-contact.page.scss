@@ -1,0 +1,84 @@
+ion-content {
+  --padding-top: 16px;
+  --background: #f4f5f8; /* เพิ่มพื้นหลังที่นุ่มนวล */
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .user-image {
+    --size: 120px; /* ขนาดรูปภาพที่ใหญ่ขึ้น */
+    margin: auto;
+    border-radius: 50%; /* ทำให้รูปภาพเป็นวงกลม */
+    overflow: hidden;
+    border: 4px solid #007bff; /* เพิ่มเส้นขอบรอบรูปภาพ */
+  }
+
+  .user-name {
+    margin-top: 12px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .info-list {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเพื่อให้ดูมีมิติ */
+  }
+
+  ion-item {
+    --padding-start: 16px;
+    --inner-padding-end: 16px;
+    --padding-end: 16px;
+    --inner-padding-start: 16px;
+    margin-bottom: 8px;
+    --background: transparent;
+    --border-color: #e0e0e0; /* เส้นใต้ที่เบาและเรียบ */
+  }
+
+  ion-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555; /* ปรับสีของ label ให้ดูเข้มขึ้น */
+    margin-bottom: 4px;
+  }
+
+  ion-text {
+    color: #007bff; /* สีฟ้าสดใสสำหรับข้อมูล */
+    font-size: 1.1rem;
+  }
+
+  ion-toolbar {
+    --background: #007bff; /* พื้นหลังของ Toolbar เป็นสีฟ้า */
+    --color: #fff; /* สีของข้อความใน Toolbar เป็นสีขาว */
+  }
+
+  ion-back-button {
+    color: #fff;
+  }
+
+  ion-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+
+  ion-button {
+    --background: #fff;
+    --color: #007bff; /* สีปุ่ม Edit */
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
